@@ -7,7 +7,7 @@ const translations = {
     collectionLabel: 'Colección', catalogTitle: 'Juegos, puzles y demostraciones', catalogCopy: 'Siete formas de explorar búsqueda, conocimiento, optimización y aprendizaje.',
     search: 'Búsqueda', searchDescription: 'Explorar estados, grafos y caminos para encontrar la mejor solución.',
     tictactoeDescription: 'Juega contra un agente óptimo y observa cómo valora cada movimiento posible.', gameTrees: 'Árboles de juego', adversarialSearch: 'Búsqueda adversarial', openDemo: 'Abrir demo',
-    degreesDescription: 'Conecta dos intérpretes y observa cómo BFS encuentra el camino más corto entre ellos.', breadthFirstSearch: 'Búsqueda en anchura', graphSearch: 'Búsqueda en grafos',
+    degreesDescription: 'Conecta dos actores y observa cómo BFS encuentra el camino más corto entre ellos.', breadthFirstSearch: 'Búsqueda en anchura', graphSearch: 'Búsqueda en grafos',
     pagerankDescription: 'Compara el navegante aleatorio con la iteración y observa cómo los enlaces reparten importancia.', randomSurfer: 'Navegante aleatorio', probability: 'Probabilidad',
     knowledge: 'Conocimiento', knowledgeDescription: 'Deducir hechos nuevos a partir de reglas e información parcial.', logicalInference: 'Inferencia lógica',
     minesweeperDescription: 'Sigue la base de conocimiento de un agente mientras identifica casillas seguras y minas.', knowledgeBases: 'Bases de conocimiento', inference: 'Inferencia',
