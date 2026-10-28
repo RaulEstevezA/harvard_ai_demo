@@ -19,7 +19,7 @@ const translations = {
     learning: 'Aprendizaje', learningDescription: 'Mejorar una estrategia a partir de experiencia y recompensas.', nimDescription: 'Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.', reinforcementLearning: 'Aprendizaje por refuerzo',
     shoppingDescription: 'Estima si una visita a una tienda online terminará en compra comparándola con visitas similares.', supervisedLearning: 'Aprendizaje supervisado', sensitivitySpecificity: 'Sensibilidad y especificidad',
     trafficDescription: 'Altera señales de tráfico y observa cómo las convoluciones extraen bordes antes de clasificarlas.', convolutionalNetworks: 'Redes convolucionales', computerVision: 'Visión por computador',
-    attentionDescription: 'Explora cómo distintas capas y cabezas relacionan palabras para completar una frase.', transformers: 'Transformers'
+    attentionDescription: 'Observa qué palabras considera más importantes un modelo para predecir la palabra que falta en una frase.', transformers: 'Transformers'
   },
   en: {
     eyebrow: 'Harvard CS50 AI · Interactive demos',
