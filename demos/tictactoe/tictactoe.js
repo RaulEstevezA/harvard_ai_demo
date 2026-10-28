@@ -18,7 +18,7 @@ const translations = {
     candidateMoves: 'Movimientos candidatos', aiPerspective: 'desde la perspectiva de la IA', emptyAnalysis: 'Los movimientos aparecerán aquí después de que juegue la IA.',
     howTitle: 'Cómo decide', howCopy: 'Minimax recorre el árbol de juego hasta estados terminales. La IA elige el movimiento que maximiza su resultado suponiendo que su rival también juega de forma óptima.',
     originLabel: 'Origen', originTitle: 'Proyecto de Harvard CS50 AI', originCopy: "Adaptación interactiva del ejercicio Tic-Tac-Toe realizado durante Harvard CS50's Introduction to Artificial Intelligence with Python. La lógica original se implementó en Python; esta demo la reproduce en JavaScript para ejecutarla en el navegador.",
-    viewCode: 'Ver código original', backToHub: 'Volver a AI Demos', footer: 'Demo ejecutada completamente en tu navegador.',
+    viewCode: 'Ver código original', backToHub: 'Volver a AI Demos',
     yourTurn: 'Tu turno. Juegas con {side}.', aiThinking: 'La IA está evaluando los futuros posibles.', youWon: 'Has ganado.', aiWon: 'La IA ha ganado.', draw: 'Empate. Ambos habéis jugado de forma óptima.',
     win: 'Victoria', loss: 'Derrota', drawResult: 'Empate', row: 'fila', column: 'columna', cellEmpty: 'vacía', cellMarked: 'marcada con {mark}'
   },
@@ -32,7 +32,7 @@ const translations = {
     candidateMoves: 'Candidate moves', aiPerspective: "from the AI's perspective", emptyAnalysis: 'Moves will appear here after the AI plays.',
     howTitle: 'How it decides', howCopy: 'Minimax traverses the game tree to terminal states. The AI chooses the move that maximizes its outcome, assuming its opponent also plays optimally.',
     originLabel: 'Origin', originTitle: 'Harvard CS50 AI project', originCopy: "Interactive adaptation of the Tic-Tac-Toe exercise completed during Harvard CS50's Introduction to Artificial Intelligence with Python. The original logic was implemented in Python; this demo reproduces it in JavaScript to run in the browser.",
-    viewCode: 'View original code', backToHub: 'Back to AI Demos', footer: 'Demo running entirely in your browser.',
+    viewCode: 'View original code', backToHub: 'Back to AI Demos',
     yourTurn: 'Your turn. You are playing {side}.', aiThinking: 'The AI is evaluating possible futures.', youWon: 'You won.', aiWon: 'The AI won.', draw: 'Draw. Both players played optimally.',
     win: 'Win', loss: 'Loss', drawResult: 'Draw', row: 'row', column: 'column', cellEmpty: 'empty', cellMarked: 'marked {mark}'
   }

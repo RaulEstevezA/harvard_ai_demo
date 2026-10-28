@@ -11,8 +11,7 @@ const translations = {
     minesweeperDescription: 'Sigue la base de conocimiento de un agente mientras identifica casillas seguras y minas.', knowledgeBases: 'Bases de conocimiento', inference: 'Inferencia',
     propositionalLogic: 'Lógica proposicional', knightsDescription: 'Resuelve acertijos de caballeros y mentirosos descartando modelos contradictorios.', modelChecking: 'Comprobación de modelos', symbolicAI: 'IA simbólica',
     optimization: 'Optimización', optimizationDescription: 'Reducir un espacio de búsqueda mediante restricciones y heurísticas.', crosswordDescription: 'Observa cómo AC-3, MRV, LCV y backtracking construyen un crucigrama válido.', heuristics: 'Heurísticas',
-    learning: 'Aprendizaje', learningDescription: 'Mejorar una estrategia a partir de experiencia y recompensas.', nimDescription: 'Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.', reinforcementLearning: 'Aprendizaje por refuerzo',
-    footer: 'Adaptaciones interactivas de proyectos realizados durante Harvard CS50 AI.'
+    learning: 'Aprendizaje', learningDescription: 'Mejorar una estrategia a partir de experiencia y recompensas.', nimDescription: 'Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.', reinforcementLearning: 'Aprendizaje por refuerzo'
   },
   en: {
     eyebrow: 'Harvard CS50 AI · Interactive demos',
@@ -26,8 +25,7 @@ const translations = {
     minesweeperDescription: "Follow an agent's knowledge base as it identifies safe cells and mines.", knowledgeBases: 'Knowledge bases', inference: 'Inference',
     propositionalLogic: 'Propositional logic', knightsDescription: 'Solve knights and knaves puzzles by eliminating contradictory models.', modelChecking: 'Model checking', symbolicAI: 'Symbolic AI',
     optimization: 'Optimization', optimizationDescription: 'Reduce a search space with constraints and heuristics.', crosswordDescription: 'Watch AC-3, MRV, LCV, and backtracking build a valid crossword.', heuristics: 'Heuristics',
-    learning: 'Learning', learningDescription: 'Improve a strategy through experience and rewards.', nimDescription: 'Train a reinforcement agent and compare how its action values change.', reinforcementLearning: 'Reinforcement learning',
-    footer: 'Interactive adaptations of projects completed during Harvard CS50 AI.'
+    learning: 'Learning', learningDescription: 'Improve a strategy through experience and rewards.', nimDescription: 'Train a reinforcement agent and compare how its action values change.', reinforcementLearning: 'Reinforcement learning'
   }
 };
 
