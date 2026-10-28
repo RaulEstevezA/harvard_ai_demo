@@ -42,25 +42,27 @@ a:hover { color: var(--accent-text); }
 
 .language-switcher {
   display: flex;
-  gap: 4px;
+  gap: 0.5rem;
 }
 
 .language-switcher__button {
-  min-width: 38px;
-  min-height: 34px;
-  padding: 4px 8px;
-  border: 1px solid transparent;
+  padding: 2px 6px;
+  border: 0;
   border-radius: 4px;
   background: transparent;
   color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: color 0.15s ease;
 }
 
 .language-switcher__button[aria-pressed="true"] {
-  background: var(--surface-raised);
-  border-color: var(--border);
   color: var(--text);
+  font-weight: 700;
 }
+
+.language-switcher__button:hover { color: var(--text); }
 
 .window {
   background: var(--surface);
