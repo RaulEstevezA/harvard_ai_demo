@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demos interactivas basadas en proyectos de Harvard CS50's Introduction to Artificial Intelligence with Python.">
+  <title>Artificial Intelligence · Raúl Estévez</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/hub.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-header__brand" href="https://raulesteveza.github.io">Raúl Estévez</a>
+    <div class="language-switcher" role="group" aria-label="Idioma">
+      <button class="language-switcher__button" type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button class="language-switcher__button" type="button" data-lang="es" aria-pressed="true">ES</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="window hub-intro" aria-labelledby="page-title">
+      <p class="eyebrow" data-i18n="eyebrow">Harvard CS50 AI · Demos interactivas</p>
+      <h1 id="page-title">Artificial Intelligence</h1>
+      <p class="hub-intro__lead" data-i18n="lead">Una colección de juegos y puzles que permite ver algoritmos de inteligencia artificial mientras trabajan.</p>
+      <p class="hub-intro__copy" data-i18n="intro">Adaptaciones interactivas de proyectos realizados durante Harvard CS50's Introduction to Artificial Intelligence with Python. Cada demo conserva el concepto del ejercicio original y añade una explicación visual de sus decisiones.</p>
+      <div class="hub-intro__actions">
+        <a class="button button--primary" href="demos/tictactoe/" data-i18n="openFirst">Abrir primera demo</a>
+        <a class="button" href="https://github.com/RaulEstevezA/harvard_ai" data-i18n="originalCode">Código original</a>
+        <a class="button" href="https://raulesteveza.github.io/demos" data-i18n="allDemos">Todas las demos</a>
+      </div>
+    </section>
+
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" data-i18n="collectionLabel">Colección</p>
+          <h2 id="catalog-title" data-i18n="catalogTitle">Juegos y puzles</h2>
+        </div>
+        <p class="section-heading__copy" data-i18n="catalogCopy">Cinco formas de explorar búsqueda, conocimiento, optimización y aprendizaje.</p>
+      </div>
+
+      <div class="category" aria-labelledby="search-title">
+        <div class="category__heading">
+          <span class="category__number">01</span>
+          <div>
+            <h3 id="search-title" data-i18n="search">Búsqueda</h3>
+            <p data-i18n="searchDescription">Elegir la mejor acción explorando estados futuros.</p>
+          </div>
+        </div>
+        <article class="demo-card demo-card--available">
+          <div class="demo-card__preview demo-card__preview--board" aria-hidden="true">
+            <span>X</span><span></span><span>O</span><span></span><span>X</span><span></span><span>O</span><span></span><span>X</span>
+          </div>
+          <div class="demo-card__body">
+            <div class="demo-card__meta"><span class="badge badge--available" data-i18n="available">Disponible</span><span>Minimax</span></div>
+            <h4>Tic-Tac-Toe</h4>
+            <p data-i18n="tictactoeDescription">Juega contra un agente óptimo y observa cómo valora cada movimiento posible.</p>
+            <ul class="tag-list" aria-label="Conceptos">
+              <li>Minimax</li><li data-i18n="gameTrees">Árboles de juego</li><li data-i18n="adversarialSearch">Búsqueda adversarial</li>
+            </ul>
+            <a class="button button--primary" href="demos/tictactoe/" data-i18n="openDemo">Abrir demo</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="category" aria-labelledby="knowledge-title">
+        <div class="category__heading">
+          <span class="category__number">02</span>
+          <div>
+            <h3 id="knowledge-title" data-i18n="knowledge">Conocimiento</h3>
+            <p data-i18n="knowledgeDescription">Deducir hechos nuevos a partir de reglas e información parcial.</p>
+          </div>
+        </div>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <div class="demo-card__body">
+              <div class="demo-card__meta"><span class="badge" data-i18n="planned">Planificada</span><span data-i18n="logicalInference">Inferencia lógica</span></div>
+              <h4>Minesweeper AI</h4>
+              <p data-i18n="minesweeperDescription">Sigue la base de conocimiento de un agente mientras identifica casillas seguras y minas.</p>
+              <ul class="tag-list"><li data-i18n="knowledgeBases">Bases de conocimiento</li><li data-i18n="inference">Inferencia</li></ul>
+            </div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-card__body">
+              <div class="demo-card__meta"><span class="badge" data-i18n="planned">Planificada</span><span data-i18n="propositionalLogic">Lógica proposicional</span></div>
+              <h4>Knights and Knaves</h4>
+              <p data-i18n="knightsDescription">Resuelve acertijos de caballeros y mentirosos descartando modelos contradictorios.</p>
+              <ul class="tag-list"><li data-i18n="modelChecking">Comprobación de modelos</li><li data-i18n="symbolicAI">IA simbólica</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="category" aria-labelledby="optimization-title">
+        <div class="category__heading">
+          <span class="category__number">03</span>
+          <div>
+            <h3 id="optimization-title" data-i18n="optimization">Optimización</h3>
+            <p data-i18n="optimizationDescription">Reducir un espacio de búsqueda mediante restricciones y heurísticas.</p>
+          </div>
+        </div>
+        <article class="demo-card">
+          <div class="demo-card__body">
+            <div class="demo-card__meta"><span class="badge" data-i18n="planned">Planificada</span><span>CSP</span></div>
+            <h4>Crossword Solver</h4>
+            <p data-i18n="crosswordDescription">Observa cómo AC-3, MRV, LCV y backtracking construyen un crucigrama válido.</p>
+            <ul class="tag-list"><li>AC-3</li><li>Backtracking</li><li data-i18n="heuristics">Heurísticas</li></ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="category" aria-labelledby="learning-title">
+        <div class="category__heading">
+          <span class="category__number">04</span>
+          <div>
+            <h3 id="learning-title" data-i18n="learning">Aprendizaje</h3>
+            <p data-i18n="learningDescription">Mejorar una estrategia a partir de experiencia y recompensas.</p>
+          </div>
+        </div>
+        <article class="demo-card">
+          <div class="demo-card__body">
+            <div class="demo-card__meta"><span class="badge" data-i18n="planned">Planificada</span><span>Q-learning</span></div>
+            <h4>Nim</h4>
+            <p data-i18n="nimDescription">Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.</p>
+            <ul class="tag-list"><li>Q-learning</li><li data-i18n="reinforcementLearning">Aprendizaje por refuerzo</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span data-i18n="footer">Adaptaciones interactivas de proyectos realizados durante Harvard CS50 AI.</span>
+    <a href="https://raulesteveza.github.io">Raúl Estévez</a>
+  </footer>
+  <script src="assets/js/hub.js"></script>
+</body>
+</html>
