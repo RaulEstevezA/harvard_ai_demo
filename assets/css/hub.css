@@ -78,7 +78,7 @@
   border-radius: var(--radius-panel);
 }
 
-.demo-card--available { grid-template-columns: 220px minmax(0, 1fr); }
+.demo-card--featured { grid-template-columns: 220px minmax(0, 1fr); }
 
 .demo-card__preview {
   min-height: 220px;
@@ -126,12 +126,6 @@
   font-weight: 600;
 }
 
-.badge--available {
-  border-color: var(--success);
-  background: var(--success-soft);
-  color: var(--success);
-}
-
 .demo-card h4 { margin-bottom: 8px; font-size: 1.1rem; }
 .demo-card p { margin-bottom: 16px; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 
@@ -162,7 +156,7 @@
   .catalog { padding-top: 48px; }
   .section-heading { grid-template-columns: 1fr; gap: 8px; }
   .demo-grid { grid-template-columns: 1fr; }
-  .demo-card--available { grid-template-columns: 1fr; }
+  .demo-card--featured { grid-template-columns: 1fr; }
   .demo-card__preview { min-height: 180px; border-right: 0; border-bottom: 1px solid var(--border); }
 }
 
