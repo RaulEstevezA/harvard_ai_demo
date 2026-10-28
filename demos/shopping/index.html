@@ -27,14 +27,15 @@
           <div class="panel-heading"><div><p class="panel-label" data-i18n="predictionLabel">Clasificación</p><h2 id="prediction-title" data-i18n="predictionTitle">Predicción del modelo</h2></div><span class="analysis-state" id="prediction-state">k = 1</span></div>
           <div class="k-control"><span data-i18n="neighbors">Número de vecinos</span><div><button type="button" data-k="1" aria-pressed="true">1</button><button type="button" data-k="3" aria-pressed="false">3</button><button type="button" data-k="5" aria-pressed="false">5</button></div><small data-i18n="originalK">El proyecto original utiliza k = 1.</small></div>
           <div class="purchase-result" id="purchase-result" role="status" aria-live="polite"></div>
-          <dl class="prediction-metrics"><div><dt data-i18n="votes">Votos de compra</dt><dd id="metric-votes">—</dd></div><div><dt data-i18n="nearestDistance">Distancia mínima</dt><dd id="metric-distance">—</dd></div><div><dt data-i18n="trainingRows">Entrenamiento</dt><dd id="metric-training">—</dd></div><div><dt data-i18n="features">Variables</dt><dd>17</dd></div></dl>
+          <p class="session-feedback" id="session-feedback" aria-live="polite"></p>
+          <dl class="prediction-metrics"><div><dt data-i18n="votes">Votos de compra</dt><dd id="metric-votes">—</dd></div><div><dt data-i18n="nearestDistance">Distancia mínima</dt><dd id="metric-distance">—</dd></div><div><dt data-i18n="modifiedFields">Campos modificados</dt><dd id="metric-modified">—</dd></div><div><dt data-i18n="trainingRows">Entrenamiento</dt><dd id="metric-training">—</dd></div></dl>
           <section class="neighbor-block" aria-labelledby="neighbor-title"><h3 id="neighbor-title" data-i18n="neighborTitle">Vecinos más cercanos</h3><div class="neighbor-list" id="neighbor-list"></div></section>
           <section class="contribution-block" aria-labelledby="contribution-title"><h3 id="contribution-title" data-i18n="contributionTitle">Variables que más separan al vecino</h3><div class="contribution-list" id="contribution-list"></div></section>
         </aside>
       </div>
       <section class="evaluation-panel" aria-labelledby="evaluation-title">
         <div class="panel-heading"><div><p class="panel-label" data-i18n="evaluationLabel">Conjunto de prueba</p><h2 id="evaluation-title" data-i18n="evaluationTitle">Evaluación del clasificador</h2></div><span class="analysis-state" id="evaluation-size">—</span></div>
-        <p class="evaluation-copy" data-i18n="evaluationCopy">La misma configuración de k se evalúa sobre sesiones que el modelo no utilizó durante el entrenamiento.</p>
+        <p class="evaluation-copy" data-i18n="evaluationCopy">Estas métricas evalúan el modelo completo: cambian al elegir otro valor de k, no al editar una sesión.</p>
         <div class="evaluation-grid"><dl class="score-list"><div><dt data-i18n="accuracy">Acierto</dt><dd id="score-accuracy">—</dd></div><div><dt data-i18n="sensitivity">Sensibilidad</dt><dd id="score-sensitivity">—</dd></div><div><dt data-i18n="specificity">Especificidad</dt><dd id="score-specificity">—</dd></div></dl><div class="confusion-matrix" id="confusion-matrix"></div><div class="dataset-summary" id="dataset-summary"></div></div>
       </section>
     </section>
