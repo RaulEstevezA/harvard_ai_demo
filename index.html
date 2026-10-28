@@ -22,7 +22,7 @@
     <section class="window hub-intro" aria-labelledby="page-title">
       <p class="eyebrow" data-i18n="eyebrow">Harvard CS50 AI · Demos interactivas</p>
       <h1 id="page-title">Artificial Intelligence</h1>
-      <p class="hub-intro__lead" data-i18n="lead">Una colección de juegos y puzles que permite ver algoritmos de inteligencia artificial mientras trabajan.</p>
+      <p class="hub-intro__lead" data-i18n="lead">Una colección de juegos, puzles y demostraciones que permite ver algoritmos de inteligencia artificial mientras trabajan.</p>
       <p class="hub-intro__copy" data-i18n="intro">Adaptaciones interactivas de proyectos realizados durante Harvard CS50's Introduction to Artificial Intelligence with Python. Cada demo conserva el concepto del ejercicio original y añade una explicación visual de sus decisiones.</p>
       <div class="hub-intro__actions">
         <a class="button" href="https://github.com/RaulEstevezA/harvard_ai" data-i18n="originalCode">Código original</a>
@@ -34,9 +34,9 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow" data-i18n="collectionLabel">Colección</p>
-          <h2 id="catalog-title" data-i18n="catalogTitle">Juegos y puzles</h2>
+          <h2 id="catalog-title" data-i18n="catalogTitle">Juegos, puzles y demostraciones</h2>
         </div>
-        <p class="section-heading__copy" data-i18n="catalogCopy">Cinco formas de explorar búsqueda, conocimiento, optimización y aprendizaje.</p>
+        <p class="section-heading__copy" data-i18n="catalogCopy">Seis formas de explorar búsqueda, conocimiento, optimización y aprendizaje.</p>
       </div>
 
       <div class="category" aria-labelledby="search-title">
@@ -44,23 +44,33 @@
           <span class="category__number">01</span>
           <div>
             <h3 id="search-title" data-i18n="search">Búsqueda</h3>
-            <p data-i18n="searchDescription">Elegir la mejor acción explorando estados futuros.</p>
+            <p data-i18n="searchDescription">Explorar estados, grafos y caminos para encontrar la mejor solución.</p>
           </div>
         </div>
-        <article class="demo-card demo-card--featured">
-          <div class="demo-card__preview demo-card__preview--board" aria-hidden="true">
-            <span>X</span><span></span><span>O</span><span></span><span>X</span><span></span><span>O</span><span></span><span>X</span>
-          </div>
-          <div class="demo-card__body">
-            <div class="demo-card__meta"><span>Minimax</span></div>
-            <h4>Tic-Tac-Toe</h4>
-            <p data-i18n="tictactoeDescription">Juega contra un agente óptimo y observa cómo valora cada movimiento posible.</p>
-            <ul class="tag-list" aria-label="Conceptos">
-              <li>Minimax</li><li data-i18n="gameTrees">Árboles de juego</li><li data-i18n="adversarialSearch">Búsqueda adversarial</li>
-            </ul>
-            <a class="button button--primary" href="demos/tictactoe/" data-i18n="openDemo">Abrir demo</a>
-          </div>
-        </article>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <div class="demo-card__body">
+              <div class="demo-card__meta"><span>Minimax</span></div>
+              <h4>Tic-Tac-Toe</h4>
+              <p data-i18n="tictactoeDescription">Juega contra un agente óptimo y observa cómo valora cada movimiento posible.</p>
+              <ul class="tag-list" aria-label="Conceptos">
+                <li>Minimax</li><li data-i18n="gameTrees">Árboles de juego</li><li data-i18n="adversarialSearch">Búsqueda adversarial</li>
+              </ul>
+              <a class="button button--primary" href="demos/tictactoe/" data-i18n="openDemo">Abrir demo</a>
+            </div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-card__body">
+              <div class="demo-card__meta"><span>BFS</span></div>
+              <h4>Degrees</h4>
+              <p data-i18n="degreesDescription">Conecta dos intérpretes y observa cómo BFS encuentra el camino más corto entre ellos.</p>
+              <ul class="tag-list" aria-label="Conceptos">
+                <li data-i18n="breadthFirstSearch">Búsqueda en anchura</li><li data-i18n="graphSearch">Búsqueda en grafos</li>
+              </ul>
+              <a class="button button--primary" href="demos/degrees/" data-i18n="openDemo">Abrir demo</a>
+            </div>
+          </article>
+        </div>
       </div>
 
       <div class="category" aria-labelledby="knowledge-title">
