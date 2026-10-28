@@ -43,6 +43,13 @@ const featuredTitles = new Set([
   'The Departed', 'Inception', 'Interstellar', 'The Dark Knight', 'Harry Potter and the Sorcerer\'s Stone',
   'The Lord of the Rings: The Fellowship of the Ring', 'Star Wars', 'The Avengers', 'Avengers: Endgame'
 ]);
+const showcaseTitles = [
+  ['Pulp Fiction', '1994'], ['The Avengers', '2012'], ['Ocean\'s Eleven', '2001'], ['Avengers: Endgame', '2019'],
+  ['The Prestige', '2006'], ['The Dark Knight Rises', '2012'], ['The Big Short', '2015'], ['Good Will Hunting', '1997'],
+  ['Star Wars: Episode IV - A New Hope', '1977'], ['Harry Potter and the Sorcerer\'s Stone', '2001'],
+  ['The Matrix', '1999'], ['The Departed', '2006'], ['Apollo 13', '1995'], ['Everybody Knows', '2018'],
+  ['Rudo y Cursi', '2008']
+];
 
 function parseCsv(text) {
   const rows = [];
@@ -105,6 +112,9 @@ const chosenMovies = movies.slice(0, maxMovies);
 const usedPeople = new Set(chosenMovies.flatMap(movie => movie.cast));
 const compactPeople = Object.fromEntries(Object.entries(people).filter(([id]) => usedPeople.has(id)));
 const compactMovies = Object.fromEntries(chosenMovies.map(({ id, title, year, cast }) => [id, { title, year, cast }]));
+const showcase = showcaseTitles
+  .map(([title, year]) => chosenMovies.find(movie => movie.title === title && movie.year === year)?.id)
+  .filter(Boolean);
 
 function distance(from, to) {
   const queue = [[from, 0]];
@@ -137,6 +147,7 @@ const payload = {
   people: compactPeople,
   movies: compactMovies,
   presets,
+  showcase,
   meta: {
     source: 'Harvard CS50 AI Degrees large dataset',
     seedCount: seeds.length,
