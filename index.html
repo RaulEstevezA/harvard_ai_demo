@@ -40,7 +40,7 @@
           <p class="eyebrow" data-i18n="collectionLabel">Colección</p>
           <h2 id="catalog-title" data-i18n="catalogTitle">Juegos, puzles y demostraciones</h2>
         </div>
-        <p class="section-heading__copy" data-i18n="catalogCopy">Nueve formas de explorar búsqueda, conocimiento, optimización y aprendizaje.</p>
+        <p class="section-heading__copy" data-i18n="catalogCopy">Diez formas de explorar búsqueda, conocimiento, optimización y aprendizaje.</p>
       </div>
 
       <div class="category" aria-labelledby="search-title">
@@ -163,15 +163,26 @@
             <p data-i18n="learningDescription">Mejorar una estrategia a partir de experiencia y recompensas.</p>
           </div>
         </div>
-        <article class="demo-card">
-          <div class="demo-card__body">
-            <div class="demo-card__meta"><span class="demo-type demo-type--game" data-i18n="gameLabel">Juego</span><span>Q-learning</span></div>
-            <h4>Nim</h4>
-            <p data-i18n="nimDescription">Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.</p>
-            <ul class="tag-list"><li>Q-learning</li><li data-i18n="reinforcementLearning">Aprendizaje por refuerzo</li></ul>
-            <a class="button button--primary" href="demos/nim/" data-i18n="openDemo">Abrir demo</a>
-          </div>
-        </article>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <div class="demo-card__body">
+              <div class="demo-card__meta"><span class="demo-type demo-type--game" data-i18n="gameLabel">Juego</span><span>Q-learning</span></div>
+              <h4>Nim</h4>
+              <p data-i18n="nimDescription">Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.</p>
+              <ul class="tag-list"><li>Q-learning</li><li data-i18n="reinforcementLearning">Aprendizaje por refuerzo</li></ul>
+              <a class="button button--primary" href="demos/nim/" data-i18n="openDemo">Abrir demo</a>
+            </div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-card__body">
+              <div class="demo-card__meta"><span class="demo-type demo-type--demonstration" data-i18n="demonstrationLabel">Demostración</span><span>k-NN</span></div>
+              <h4>Shopping</h4>
+              <p data-i18n="shoppingDescription">Clasifica sesiones de compra y descubre qué vecino determina cada predicción.</p>
+              <ul class="tag-list"><li data-i18n="supervisedLearning">Aprendizaje supervisado</li><li data-i18n="sensitivitySpecificity">Sensibilidad y especificidad</li></ul>
+              <a class="button button--primary" href="demos/shopping/" data-i18n="openDemo">Abrir demo</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
