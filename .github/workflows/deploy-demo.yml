@@ -1,0 +1,95 @@
+# Publishes the AI demo hub in the demos section of the personal website.
+# Requires PORTFOLIO_DEPLOY_TOKEN with write access to the website repository.
+
+name: Deploy demo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'demos/**'
+      - '.github/workflows/deploy-demo.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-harvard-ai-demo
+  cancel-in-progress: false
+
+env:
+  SITE_REPOSITORY: RaulEstevezA/RaulEstevezA.github.io
+  DEMO_PATH: demos/Harvard_AI
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check deploy token
+        env:
+          PORTFOLIO_DEPLOY_TOKEN: ${{ secrets.PORTFOLIO_DEPLOY_TOKEN }}
+        run: |
+          if [ -z "$PORTFOLIO_DEPLOY_TOKEN" ]; then
+            echo "::error::Missing PORTFOLIO_DEPLOY_TOKEN secret."
+            exit 1
+          fi
+
+      - name: Checkout demo
+        uses: actions/checkout@v4
+
+      - name: Check JavaScript syntax
+        run: |
+          for file in assets/js/*.js demos/*/*.js; do
+            node --check "$file"
+          done
+
+      - name: Assemble static site
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          cp -R assets demos dist/
+
+      - name: Checkout site
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.SITE_REPOSITORY }}
+          ref: main
+          token: ${{ secrets.PORTFOLIO_DEPLOY_TOKEN }}
+          path: site
+
+      - name: Copy demo into site
+        run: |
+          mkdir -p "site/${DEMO_PATH}"
+          rsync -a --delete dist/ "site/${DEMO_PATH}/"
+
+      - name: Commit and push changes
+        working-directory: site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "${DEMO_PATH}/"
+
+          if git diff --cached --quiet; then
+            echo "The demo has not changed; nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "Deploy Harvard AI demos"
+
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            if [ "$attempt" -lt 3 ]; then
+              echo "Push attempt $attempt failed; retrying after updating main."
+              sleep 5
+            fi
+          done
+
+          echo "Unable to push the deployment after 3 attempts."
+          exit 1
