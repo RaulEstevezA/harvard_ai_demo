@@ -1,6 +1,7 @@
 .mine-layout { display: grid; grid-template-columns: minmax(430px, 0.95fr) minmax(420px, 1.05fr); }
 .mine-game, .knowledge-panel { padding: 28px 32px 32px; }
 .mine-game { border-right: 1px solid var(--border); }
+.board-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; }
 .mine-status { min-height: 42px; display: grid; place-items: center; margin-bottom: 16px; padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-button); background: var(--page-bg); color: var(--muted); font-size: .875rem; text-align: center; }
 .mine-status[data-tone="safe"] { border-color: var(--success); color: var(--success); }
 .mine-status[data-tone="risk"] { border-color: var(--warning); color: var(--warning); }
@@ -34,4 +35,4 @@
 .inference-entry strong { color: var(--text); }
 .knowledge-empty { margin: 0; padding: 24px 16px; color: var(--muted); font-size: .8125rem; text-align: center; }
 @media (max-width: 1000px) { .mine-layout { grid-template-columns: 1fr; } .mine-game { border-right: 0; border-bottom: 1px solid var(--border); } }
-@media (max-width: 600px) { .mine-game, .knowledge-panel { padding: 20px 16px; } .mine-metrics { grid-template-columns: repeat(2, 1fr); } .mine-metrics div:nth-child(2) { border-right: 0; } .mine-metrics div:nth-child(-n+2) { border-bottom: 1px solid var(--border); } .mine-actions .button { width: 100%; } }
+@media (max-width: 600px) { .mine-game, .knowledge-panel { padding: 20px 16px; } .board-actions { width: 100%; justify-content: space-between; } .mine-metrics { grid-template-columns: repeat(2, 1fr); } .mine-metrics div:nth-child(2) { border-right: 0; } .mine-metrics div:nth-child(-n+2) { border-bottom: 1px solid var(--border); } .mine-actions .button { width: 100%; } }
