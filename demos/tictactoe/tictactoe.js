@@ -43,6 +43,8 @@ let human = X;
 let ai = O;
 let aiIsThinking = false;
 let language = localStorage.getItem('lang') || 'es';
+let lastAnalysis = null;
+let currentStatus = { key: 'yourTurn', tone: '', replacements: { side: X } };
 
 const cells = [...document.querySelectorAll('[data-cell]')];
 const statusElement = document.querySelector('#game-status');
@@ -118,6 +120,7 @@ function coordinates(index) { return `[${Math.floor(index / 3) + 1}, ${(index % 
 function resultLabel(score) { return score === 1 ? t('win') : score === -1 ? t('loss') : t('drawResult'); }
 
 function setStatus(key, tone = '', replacements = {}) {
+  currentStatus = { key, tone, replacements };
   statusElement.textContent = t(key, replacements);
   statusElement.dataset.tone = tone;
 }
@@ -161,6 +164,7 @@ function renderCandidates(analysis) {
 }
 
 function updateAnalysis(analysis) {
+  lastAnalysis = analysis;
   metrics.positions.textContent = analysis.positions.toLocaleString(language);
   metrics.depth.textContent = String(analysis.maxDepth);
   metrics.time.textContent = `${analysis.time.toFixed(1)} ms`;
@@ -211,6 +215,7 @@ function playHuman(index) {
 }
 
 function resetAnalysis() {
+  lastAnalysis = null;
   metrics.positions.textContent = '0';
   metrics.depth.textContent = '0';
   metrics.time.textContent = '—';
@@ -249,7 +254,8 @@ function setLanguage(nextLanguage) {
   });
   localStorage.setItem('lang', language);
   renderBoard();
-  if (!isTerminal(board)) setStatus(aiIsThinking ? 'aiThinking' : 'yourTurn', aiIsThinking ? 'thinking' : '', { side: human });
+  if (lastAnalysis) updateAnalysis(lastAnalysis);
+  setStatus(currentStatus.key, currentStatus.tone, currentStatus.replacements);
 }
 
 cells.forEach((cell) => cell.addEventListener('click', () => playHuman(Number(cell.dataset.cell))));
