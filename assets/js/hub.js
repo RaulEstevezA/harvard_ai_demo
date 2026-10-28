@@ -17,7 +17,7 @@ const translations = {
     parserDescription: 'Analiza frases en castellano e inglés y compara sus posibles árboles sintácticos.', syntaxAnalysis: 'Análisis sintáctico', formalGrammar: 'Gramática formal',
     optimization: 'Optimización', optimizationDescription: 'Reducir un espacio de búsqueda mediante restricciones y heurísticas.', crosswordDescription: 'Observa cómo AC-3, MRV, LCV y backtracking construyen un crucigrama válido.', heuristics: 'Heurísticas',
     learning: 'Aprendizaje', learningDescription: 'Mejorar una estrategia a partir de experiencia y recompensas.', nimDescription: 'Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.', reinforcementLearning: 'Aprendizaje por refuerzo',
-    shoppingDescription: 'Clasifica sesiones de compra y descubre qué vecino determina cada predicción.', supervisedLearning: 'Aprendizaje supervisado', sensitivitySpecificity: 'Sensibilidad y especificidad'
+    shoppingDescription: 'Estima si una visita a una tienda online terminará en compra comparándola con visitas similares.', supervisedLearning: 'Aprendizaje supervisado', sensitivitySpecificity: 'Sensibilidad y especificidad'
   },
   en: {
     eyebrow: 'Harvard CS50 AI · Interactive demos',
