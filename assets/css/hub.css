@@ -68,6 +68,7 @@
 .category__heading p { margin-bottom: 0; color: var(--muted); font-size: 0.875rem; }
 
 .demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.demo-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .demo-card {
   overflow: hidden;
