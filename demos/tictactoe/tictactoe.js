@@ -42,7 +42,8 @@ let board = Array(9).fill(EMPTY);
 let human = X;
 let ai = O;
 let aiIsThinking = false;
-let language = localStorage.getItem('lang') || 'es';
+let language = localStorage.getItem('lang')
+  || (navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en');
 let lastAnalysis = null;
 let currentStatus = { key: 'yourTurn', tone: '', replacements: { side: X } };
 

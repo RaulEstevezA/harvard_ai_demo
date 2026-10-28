@@ -45,4 +45,7 @@ document.querySelectorAll('[data-lang]').forEach((button) => {
   button.addEventListener('click', () => setLanguage(button.dataset.lang));
 });
 
-setLanguage(localStorage.getItem('lang') || 'es');
+const storedLanguage = localStorage.getItem('lang');
+const browserLanguage = navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
+
+setLanguage(storedLanguage || browserLanguage);
