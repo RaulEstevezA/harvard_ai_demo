@@ -17,10 +17,23 @@
 
 .hub-intro__copy {
   max-width: 720px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   color: var(--muted);
   line-height: 1.65;
 }
+
+.hub-scope-note {
+  max-width: 760px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-button);
+  background: var(--page-bg);
+}
+
+.hub-scope-note strong { display: block; margin-bottom: 5px; font-size: 0.82rem; }
+.hub-scope-note p { margin: 0; color: var(--muted); font-size: 0.8rem; line-height: 1.55; }
 
 .hub-intro__actions { display: flex; flex-wrap: wrap; gap: 8px; }
 
