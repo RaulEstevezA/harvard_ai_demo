@@ -41,7 +41,7 @@ const translations = {
     learning: 'Learning', learningDescription: 'Improve a strategy through experience and rewards.', nimDescription: 'Train a reinforcement agent and compare how its action values change.', reinforcementLearning: 'Reinforcement learning',
     shoppingDescription: 'Classify shopping sessions and discover which neighbor determines each prediction.', supervisedLearning: 'Supervised learning', sensitivitySpecificity: 'Sensitivity and specificity',
     trafficDescription: 'Alter traffic signs and watch convolutions extract edges before classifying them.', convolutionalNetworks: 'Convolutional networks', computerVision: 'Computer vision',
-    attentionDescription: 'Explore how different layers and heads relate words to complete a sentence.', transformers: 'Transformers'
+    attentionDescription: 'See which words a model considers most important when predicting the missing word in a sentence.', transformers: 'Transformers'
   }
 };
 
