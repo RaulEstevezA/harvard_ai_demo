@@ -24,7 +24,7 @@ Object.keys(PEOPLE).forEach(id=>{personMovies[id]=[];});
 Object.entries(MOVIES).forEach(([movieId,movie])=>movie.cast.forEach(personId=>personMovies[personId].push(movieId)));
 
 let language=localStorage.getItem('lang')||((navigator.language||'').toLowerCase().startsWith('es')?'es':'en');
-let source='102',target='144',frontier=[],frontierIds=new Set(),explored=new Set(),current=null,found=null,done=false,running=false,steps=0,maxDepth=0,logs=[],status={key:'ready',values:{},tone:''},runToken=0;
+let source='102',target='144',frontier=[],frontierIds=new Set(),explored=new Set(),current=null,found=null,done=false,running=false,steps=0,maxDepth=0,logs=[],logSequence=0,status={key:'ready',values:{},tone:''},runToken=0;
 
 const sourceSelect=document.querySelector('#source-person');
 const targetSelect=document.querySelector('#target-person');
@@ -33,10 +33,10 @@ function t(key,values={}){let text=T[language][key];Object.entries(values).forEa
 function sortedPeople(){return Object.entries(PEOPLE).sort((a,b)=>a[1].name.localeCompare(b[1].name));}
 function setStatus(key,values={},tone=''){status={key,values,tone};const element=document.querySelector('#degrees-status');element.textContent=t(key,values);element.dataset.tone=tone;}
 function neighbors(personId){const result=[];for(const movieId of personMovies[personId])for(const neighborId of MOVIES[movieId].cast)if(neighborId!==personId)result.push({personId:neighborId,movieId});return result.sort((a,b)=>PEOPLE[a.personId].name.localeCompare(PEOPLE[b.personId].name));}
-function addLog(type,values){logs.unshift({type,values});logs=logs.slice(0,10);}
+function addLog(type,values){logs.unshift({type,values,number:logSequence++});logs=logs.slice(0,10);}
 function reconstruct(node){const path=[];while(node.parent){path.unshift({movieId:node.movieId,personId:node.personId});node=node.parent;}return path;}
 
-function resetSearch(){runToken++;source=sourceSelect.value;target=targetSelect.value;const start={personId:source,parent:null,movieId:null,depth:0};frontier=[start];frontierIds=new Set([source]);explored=new Set();current=null;found=null;done=false;running=false;steps=0;maxDepth=0;logs=[];addLog('start',{name:PEOPLE[source].name});setStatus(source===target?'samePerson':'ready',{},source===target?'found':'');if(source===target){found=start;done=true;}render();}
+function resetSearch(){runToken++;source=sourceSelect.value;target=targetSelect.value;const start={personId:source,parent:null,movieId:null,depth:0};frontier=[start];frontierIds=new Set([source]);explored=new Set();current=null;found=null;done=false;running=false;steps=0;maxDepth=0;logs=[];logSequence=0;addLog('start',{name:PEOPLE[source].name});setStatus(source===target?'samePerson':'ready',{},source===target?'found':'');if(source===target){found=start;done=true;}render();}
 
 function stepSearch(){
   if(done)return false;
@@ -55,7 +55,7 @@ async function runSearch(){if(done||running)return;running=true;const token=++ru
 
 function renderSelectors(){const options=sortedPeople().map(([id,person])=>`<option value="${id}">${person.name} (${person.birth})</option>`).join('');sourceSelect.innerHTML=options;targetSelect.innerHTML=options;sourceSelect.value=source;targetSelect.value=target;document.querySelector('#preset-list').innerHTML=PRESETS.map(([from,to],index)=>`<button type="button" data-preset="${index}">${PEOPLE[from].name} → ${PEOPLE[to].name}</button>`).join('');document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>{const [from,to]=PRESETS[Number(button.dataset.preset)];source=from;target=to;sourceSelect.value=from;targetSelect.value=to;resetSearch();}));}
 function renderChips(ids,currentId,emptyKey){return ids.length?ids.map(id=>`<span class="person-chip" data-current="${id===currentId}">${PEOPLE[id].name}</span>`).join(''):`<p class="empty-state">${t(emptyKey)}</p>`;}
-function renderLog(){const element=document.querySelector('#search-log');if(!logs.length){element.innerHTML=`<p class="empty-state">${t('emptyLog')}</p>`;return;}element.innerHTML=logs.map(entry=>{const key=`log${entry.type[0].toUpperCase()}${entry.type.slice(1)}`;return `<div class="log-entry"><strong>${steps-logs.indexOf(entry)}</strong> · ${t(key,entry.values)}</div>`;}).join('');}
+function renderLog(){const element=document.querySelector('#search-log');if(!logs.length){element.innerHTML=`<p class="empty-state">${t('emptyLog')}</p>`;return;}element.innerHTML=logs.map(entry=>{const key=`log${entry.type[0].toUpperCase()}${entry.type.slice(1)}`;return `<div class="log-entry"><strong>${entry.number}</strong> · ${t(key,entry.values)}</div>`;}).join('');}
 function renderPath(){const element=document.querySelector('#path-result'),result=document.querySelector('#degrees-result');if(!found){result.textContent='—';element.innerHTML=`<div class="path-empty">${t('emptyPath')}</div>`;return;}const path=reconstruct(found);result.textContent=t('degree',{count:path.length});let html=`<div class="path-person"><strong>${PEOPLE[source].name}</strong><span>${t('birth',{year:PEOPLE[source].birth})}</span></div>`;path.forEach(step=>{const movie=MOVIES[step.movieId],person=PEOPLE[step.personId];html+=`<div class="path-movie"><strong>${movie.title}</strong><span>${movie.year}</span></div><div class="path-person"><strong>${person.name}</strong><span>${t('birth',{year:person.birth})}</span></div>`;});element.innerHTML=html;}
 function renderMovies(){document.querySelector('#movie-grid').innerHTML=Object.values(MOVIES).map(movie=>`<article class="movie-card"><h3>${movie.title}</h3><span>${movie.year}</span><ul>${movie.cast.map(id=>`<li>${PEOPLE[id].name}</li>`).join('')}</ul></article>`).join('');}
 
