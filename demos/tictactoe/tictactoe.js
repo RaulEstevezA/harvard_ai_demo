@@ -10,7 +10,7 @@ const winningLines = [
 const translations = {
   es: {
     backHub: 'AI Demos', eyebrow: 'Búsqueda adversarial · Minimax',
-    subtitle: 'Juega contra un agente óptimo y observa cómo evalúa todos los futuros posibles antes de mover.', local: 'Procesado en local',
+    subtitle: 'Juega contra un agente óptimo y observa cómo evalúa todos los futuros posibles antes de mover.',
     gameLabel: 'Partida', chooseSide: 'Elige tu lado', newGame: 'Nueva partida', playFirst: 'Juegas primero', aiFirst: 'La IA juega primero',
     gameNote: 'Minimax juega de forma óptima. Si tú también lo haces, la partida terminará en empate.',
     analysisLabel: 'Última decisión', analysisTitle: 'Análisis de Minimax', waiting: 'Esperando', analyzing: 'Analizando', complete: 'Completado',
@@ -24,7 +24,7 @@ const translations = {
   },
   en: {
     backHub: 'AI Demos', eyebrow: 'Adversarial search · Minimax',
-    subtitle: 'Play against an optimal agent and watch it evaluate every possible future before making a move.', local: 'Processed locally',
+    subtitle: 'Play against an optimal agent and watch it evaluate every possible future before making a move.',
     gameLabel: 'Game', chooseSide: 'Choose your side', newGame: 'New game', playFirst: 'You play first', aiFirst: 'AI plays first',
     gameNote: 'Minimax plays optimally. If you do too, the game will end in a draw.',
     analysisLabel: 'Last decision', analysisTitle: 'Minimax analysis', waiting: 'Waiting', analyzing: 'Analyzing', complete: 'Complete',

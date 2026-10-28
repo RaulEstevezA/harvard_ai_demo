@@ -24,17 +24,6 @@
 .demo-header h1 { margin-bottom: 8px; font-size: 2.4rem; line-height: 1.15; }
 .demo-header p:last-child { max-width: 680px; margin-bottom: 0; color: var(--muted); font-size: 1.05rem; }
 
-.local-badge {
-  flex: 0 0 auto;
-  padding: 5px 10px;
-  border: 1px solid var(--success);
-  border-radius: var(--radius-pill);
-  background: var(--success-soft);
-  color: var(--success);
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
 .demo-layout { display: grid; grid-template-columns: minmax(360px, 0.9fr) minmax(440px, 1.1fr); }
 .game-panel, .analysis-panel { padding: 28px 32px 32px; }
 .game-panel { border-right: 1px solid var(--border); }
