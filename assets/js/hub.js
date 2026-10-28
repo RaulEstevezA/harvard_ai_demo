@@ -5,7 +5,7 @@ const translations = {
     intro: "Adaptaciones interactivas de proyectos realizados durante Harvard CS50's Introduction to Artificial Intelligence with Python. Cada demo conserva el concepto del ejercicio original y añade una explicación visual de sus decisiones.",
     scopeTitle: 'Alcance de las demos', scopeCopy: 'Estas demos son reinterpretaciones educativas para navegador, no réplicas completas de los ejercicios. Para funcionar sin backend y mantener una carga rápida, algunas utilizan conjuntos de datos, vocabularios o modelos reducidos. El código original enlazado conserva el alcance del proyecto del curso.',
     originalCode: 'Código original', allDemos: 'Todas las demos', gameLabel: 'Juego', puzzleLabel: 'Puzle', demonstrationLabel: 'Demostración',
-    collectionLabel: 'Colección', catalogTitle: 'Juegos, puzles y demostraciones', catalogCopy: 'Once formas de explorar búsqueda, conocimiento, optimización y aprendizaje.',
+    collectionLabel: 'Colección', catalogTitle: 'Juegos, puzles y demostraciones', catalogCopy: 'Doce formas de explorar búsqueda, conocimiento, optimización y aprendizaje.',
     search: 'Búsqueda', searchDescription: 'Explorar estados, grafos y caminos para encontrar la mejor solución.',
     tictactoeDescription: 'Juega contra un agente óptimo y observa cómo valora cada movimiento posible.', gameTrees: 'Árboles de juego', adversarialSearch: 'Búsqueda adversarial', openDemo: 'Abrir demo',
     degreesDescription: 'Conecta dos actores y observa cómo BFS encuentra el camino más corto entre ellos.', breadthFirstSearch: 'Búsqueda en anchura', graphSearch: 'Búsqueda en grafos',
@@ -18,7 +18,8 @@ const translations = {
     optimization: 'Optimización', optimizationDescription: 'Reducir un espacio de búsqueda mediante restricciones y heurísticas.', crosswordDescription: 'Observa cómo AC-3, MRV, LCV y backtracking construyen un crucigrama válido.', heuristics: 'Heurísticas',
     learning: 'Aprendizaje', learningDescription: 'Mejorar una estrategia a partir de experiencia y recompensas.', nimDescription: 'Entrena un agente por refuerzo y compara cómo cambian los valores de sus acciones.', reinforcementLearning: 'Aprendizaje por refuerzo',
     shoppingDescription: 'Estima si una visita a una tienda online terminará en compra comparándola con visitas similares.', supervisedLearning: 'Aprendizaje supervisado', sensitivitySpecificity: 'Sensibilidad y especificidad',
-    trafficDescription: 'Altera señales de tráfico y observa cómo las convoluciones extraen bordes antes de clasificarlas.', convolutionalNetworks: 'Redes convolucionales', computerVision: 'Visión por computador'
+    trafficDescription: 'Altera señales de tráfico y observa cómo las convoluciones extraen bordes antes de clasificarlas.', convolutionalNetworks: 'Redes convolucionales', computerVision: 'Visión por computador',
+    attentionDescription: 'Explora cómo distintas capas y cabezas relacionan palabras para completar una frase.', transformers: 'Transformers'
   },
   en: {
     eyebrow: 'Harvard CS50 AI · Interactive demos',
@@ -26,7 +27,7 @@ const translations = {
     intro: "Interactive adaptations of projects completed during Harvard CS50's Introduction to Artificial Intelligence with Python. Each demo preserves the original exercise concept and adds a visual explanation of its decisions.",
     scopeTitle: 'Demo scope', scopeCopy: 'These demos are educational reinterpretations for the browser, not complete replicas of the exercises. To work without a backend and remain quick to load, some use reduced datasets, vocabularies, or models. The linked original code preserves the full scope of the course project.',
     originalCode: 'Original code', allDemos: 'All demos', gameLabel: 'Game', puzzleLabel: 'Puzzle', demonstrationLabel: 'Demonstration',
-    collectionLabel: 'Collection', catalogTitle: 'Games, puzzles, and demonstrations', catalogCopy: 'Eleven ways to explore search, knowledge, optimization, and learning.',
+    collectionLabel: 'Collection', catalogTitle: 'Games, puzzles, and demonstrations', catalogCopy: 'Twelve ways to explore search, knowledge, optimization, and learning.',
     search: 'Search', searchDescription: 'Explore states, graphs, and paths to find the best solution.',
     tictactoeDescription: 'Play against an optimal agent and watch it evaluate every possible move.', gameTrees: 'Game trees', adversarialSearch: 'Adversarial search', openDemo: 'Open demo',
     degreesDescription: 'Connect two performers and watch BFS find the shortest path between them.', breadthFirstSearch: 'Breadth-first search', graphSearch: 'Graph search',
@@ -39,7 +40,8 @@ const translations = {
     optimization: 'Optimization', optimizationDescription: 'Reduce a search space with constraints and heuristics.', crosswordDescription: 'Watch AC-3, MRV, LCV, and backtracking build a valid crossword.', heuristics: 'Heuristics',
     learning: 'Learning', learningDescription: 'Improve a strategy through experience and rewards.', nimDescription: 'Train a reinforcement agent and compare how its action values change.', reinforcementLearning: 'Reinforcement learning',
     shoppingDescription: 'Classify shopping sessions and discover which neighbor determines each prediction.', supervisedLearning: 'Supervised learning', sensitivitySpecificity: 'Sensitivity and specificity',
-    trafficDescription: 'Alter traffic signs and watch convolutions extract edges before classifying them.', convolutionalNetworks: 'Convolutional networks', computerVision: 'Computer vision'
+    trafficDescription: 'Alter traffic signs and watch convolutions extract edges before classifying them.', convolutionalNetworks: 'Convolutional networks', computerVision: 'Computer vision',
+    attentionDescription: 'Explore how different layers and heads relate words to complete a sentence.', transformers: 'Transformers'
   }
 };
 
