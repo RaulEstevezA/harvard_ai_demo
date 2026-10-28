@@ -116,16 +116,6 @@
   font: 0.75rem var(--font-mono);
 }
 
-.badge {
-  display: inline-flex;
-  padding: 3px 8px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  color: var(--muted);
-  font-family: var(--font-sans);
-  font-weight: 600;
-}
-
 .demo-card h4 { margin-bottom: 8px; font-size: 1.1rem; }
 .demo-card p { margin-bottom: 16px; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 
